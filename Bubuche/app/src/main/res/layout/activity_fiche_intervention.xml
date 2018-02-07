@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aurelienthazet.bubuche.FicheInterventionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvFicheIntervention"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/tvFicheIntervention"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btAccueilFicheIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_home" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvIdFicheIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvIdFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataIdFicheIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataIdFicheArbre"
+                android:textColor="@android:color/background_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvIdArbreFicheIntervention"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvIdArbreFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataIdArbreFicheIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataIdArbreFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTypeFicheIntervention"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvTypeFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataTypeFicheIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataTypeFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDateFicheIntervention"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDateFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataTypeFicheIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataTypeFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvHeureFicheIntervention"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvHeureFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataHeureFicheIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataHeureFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvObsFicheIntervention"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvObsFicheIntervention"
+                android:textColor="@android:color/background_dark" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/mtObsFicheIntervention"
+            android:layout_width="match_parent"
+            android:layout_height="314dp"
+            android:ems="10"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:text="@string/mtObsFicheIntervention" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

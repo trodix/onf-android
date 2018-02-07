@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aurelienthazet.bubuche.FicheArbreActivity">
+
+    <LinearLayout
+        android:layout_width="379dp"
+        android:layout_height="508dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvFicheArbre"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/tvFicheArbre"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btAccueilFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_home" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvIdFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvIdFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataIdFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataIdFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCommuneFicheArbre"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvCommuneFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataCommuneFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataCommuneFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDatePlantaFicheArbre"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDatePlantaFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataDatePlantaFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataDatePlantaFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvGenreFicheArbre"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvGenreFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataGenreFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataGenreFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvEspeceFicheArbre"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvEspeceFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tvDataEspeceFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDataEspeceFicheArbre"
+                android:textColor="@android:color/background_dark" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/tvListeInterventionsFicheArbre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvListeInterventionsFicheArbre"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvIdInterventionFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvIdInterventionFicheArbre"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTypeInterventionFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvTypeInterventionFicheArbre"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvDateInterventionFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDateInterventionFicheArbre"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvDetailsInterventionFicheArbre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvDetailsInterventionFicheArbre"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="253dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btCreerIntervention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btCreerIntervention" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
