@@ -14,11 +14,11 @@ public class CreateBdBubuche extends SQLiteOpenHelper {
 
         private static String TABLE_ARBRE = "arbre";
         private static final String CREATE_BDD = "CREATE TABLE " + TABLE_ARBRE + "(" +
-                "idArbre INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "idArbre INTEGER PRIMARY KEY," +
                 "libelleFrancais TEXT NOT NULL, " +
                 "commune TEXT NOT NULL, " +
                 "cp TEXT NOT NULL, " +
-                "datePlantation DATE NOT NULL," +
+                "datePlantation TEXT NOT NULL," +
                 "genre TEXT NOT NULL," +
                 "espece TEXT NOT NULL);";
 

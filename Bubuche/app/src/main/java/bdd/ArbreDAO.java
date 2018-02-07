@@ -14,7 +14,7 @@ import metier.Arbre;
 
 public class ArbreDAO {
 
-        private static final int VERSION_BDD = 3;
+        private static final int VERSION_BDD = 9;
         private static final String NOM_BDD = "bubuche.db";
         private static final String TABLE_ARBRE = "arbre";
         protected SQLiteDatabase db = null;
@@ -32,6 +32,8 @@ public class ArbreDAO {
          */
         public SQLiteDatabase open() {
             db = createDb.getWritableDatabase();
+            Log.d("BDD", "Base ouverte : " +  db.isDbLockedByCurrentThread());
+            Log.d("BDD", "Base ouverte : " +  db.isDbLockedByOtherThreads());
             Log.d("BDD", "Base ouverte");
             return db;
         }
@@ -64,7 +66,7 @@ public class ArbreDAO {
 
         public Cursor readLesArbres() {
             //Requete
-            String reqSQL = "SELECT idArbre as '_idArbre', libelleFrancais, commune, datePlantation, cp, genre, espece FROM " + TABLE_ARBRE;
+            String reqSQL = "SELECT idArbre as '_id', libelleFrancais, commune, datePlantation, cp, genre, espece FROM " + TABLE_ARBRE;
             Log.d("BDD", reqSQL);
 
             //Exécution requete
