@@ -61,7 +61,10 @@ public class InterventionDAO {
             db.close();
         }
 
+<<<<<<< HEAD
+}
+=======
 
     }
 
-
+>>>>>>> 67ed5463a5a21d7c5df24e7413f2632e5162026b

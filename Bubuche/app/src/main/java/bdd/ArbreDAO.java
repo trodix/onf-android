@@ -14,7 +14,7 @@ import metier.Arbre;
 
 public class ArbreDAO {
 
-    private static final int VERSION_BDD = 10;
+    private static final int VERSION_BDD = 11;
     private static final String NOM_BDD = "bubuche.db";
     private static final String TABLE_ARBRE = "arbre";
     protected SQLiteDatabase db = null;
