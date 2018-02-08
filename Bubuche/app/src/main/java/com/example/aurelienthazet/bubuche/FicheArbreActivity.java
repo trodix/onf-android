@@ -31,27 +31,27 @@ public class FicheArbreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fiche_arbre);
 
         btCreerIntervention = (Button) findViewById(R.id.btCreationIntervention);
-        btCreerIntervention.setOnClickListener(new View.OnClickListener() {
+        /*btCreerIntervention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(FicheArbreActivity.this, CreationInterventionActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
-        /*btAfficherIntervention = (Button)findViewById((R.id.btCreerIntervention));
+        btAfficherIntervention = (Button)findViewById((R.id.btCreerIntervention));
         btCreerIntervention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //Récupération de l'id de l'arbre en chaine de caractère + conversion en int
                 int id = Integer.parseInt(getIntent().getStringExtra("selected-item"));
-                Intent intent = new Intent(FicheArbreActivity.this, FicheInterventionActivity.class);
+                Intent intent = new Intent(FicheArbreActivity.this, CreationInterventionActivity.class);
                 intent.putExtra("idArbre", id);
 
                 startActivity(intent);
             }
-        });*/
+        });
 
         afficherDetailsArbre();
         /*btAccueilFicheArbre = (Button) findViewById(R.id.btAccueilFicheArbre);
