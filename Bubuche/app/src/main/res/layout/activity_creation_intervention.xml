@@ -89,7 +89,7 @@
         <EditText
             android:id="@+id/mtObsCreationIntervention"
             android:layout_width="match_parent"
-            android:layout_height="246dp"
+            android:layout_height="234dp"
             android:ems="10"
             android:gravity="top|left"
             android:hint="@string/mtObsCreationIntervention"
@@ -97,7 +97,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Space

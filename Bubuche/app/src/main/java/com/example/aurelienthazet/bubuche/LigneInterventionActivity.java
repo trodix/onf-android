@@ -17,14 +17,5 @@ public class LigneInterventionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ligne_intervention);
 
-        //Les lignes suivantes permettent de rediriger l'utilisateur vers la page concernée après un click sur un bouton
-        btDetailsFicheIntervention = (Button) findViewById(R.id.btDetailsFicheIntervention);
-        btDetailsFicheIntervention.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(LigneInterventionActivity.this, FicheInterventionActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

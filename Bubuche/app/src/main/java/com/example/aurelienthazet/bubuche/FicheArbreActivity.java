@@ -10,7 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import bdd.ArbreDAO;
+import bdd.InterventionDAO;
+import metier.Intervention;
 
 public class FicheArbreActivity extends AppCompatActivity {
 
@@ -18,11 +22,17 @@ public class FicheArbreActivity extends AppCompatActivity {
     private Button btCreerIntervention;
     private Button btAfficherIntervention;
 
+    //Champs infos arbre
     private TextView tvDataIdFicheArbre;
     private TextView tvDataCommuneFicheArbre;
     private TextView tvDataDatePlantationFicheArbre;
     private TextView tvDataGenreFicheArbre;
     private TextView tvDataEspeceFicheArbre;
+
+    //champs infos intervention
+    private TextView tvLibIdIntervention;
+    private TextView tvLibTypeIntervention;
+    private TextView tvLibDateIntervention;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -54,6 +64,7 @@ public class FicheArbreActivity extends AppCompatActivity {
         });*/
 
         afficherDetailsArbre();
+
         /*btAccueilFicheArbre = (Button) findViewById(R.id.btAccueilFicheArbre);
         btAccueilFicheArbre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +73,6 @@ public class FicheArbreActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });*/
-
-
     }
 
     private void afficherDetailsArbre(){
@@ -98,13 +107,37 @@ public class FicheArbreActivity extends AppCompatActivity {
         tvDataDatePlantationFicheArbre.setText(detailArbre.getString(3));
         tvDataGenreFicheArbre.setText(detailArbre.getString(4));
         tvDataEspeceFicheArbre.setText(detailArbre.getString(5));
-
-
-
-
-
-
-
-
     }
+
+
+    private void afficherIntervention(){
+        Log.d("BDD", "Début afficherIntervention");
+
+        //Accès BDD
+        InterventionDAO uneInterventionDAO = new InterventionDAO(getApplicationContext());
+        Log.d("BDD","uneInterventionDAO accessible");
+        uneInterventionDAO.open();
+        Log.d("BDD", "Open réussi");
+
+        //Récupération de l'id de l'arbre en chaine de caractère + conversion en int
+        int id = Integer.parseInt(getIntent().getStringExtra("selected-item"));
+
+        //Affichage de l'id pour test
+        Log.d("BDD", "Id Arbre : " + id);
+
+        //On récupére le résultat de la requête dans un curseur en passant l'id de l'arbre
+        Cursor uneIntervention = uneInterventionDAO.readLesInterventions(id);
+        uneIntervention.moveToNext();
+
+        tvLibIdIntervention = (TextView) findViewById(R.id.tvLibIdIntervention);
+        tvLibTypeIntervention = (TextView) findViewById(R.id.tvLibTypeIntervention);
+        tvLibDateIntervention = (TextView) findViewById(R.id.tvLibDateIntervention);
+
+        Log.d("BDD", "Id Arbre : " + uneIntervention.getInt(0));
+        tvLibIdIntervention.setText(String.valueOf(uneIntervention.getInt(0)));
+        tvLibTypeIntervention.setText(uneIntervention.getString(1));
+        tvLibDateIntervention.setText(uneIntervention.getString(2));
+    }
+
+
 }

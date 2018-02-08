@@ -61,6 +61,16 @@ public class InterventionDAO {
             db.close();
         }
 
+        public Cursor readLesInterventions(int id) {
+            //Requete
+            String reqSQL = "SELECT idIntervention as '_id', dateIntervention, heureIntervention, observations FROM " + TABLE_INTERVENTION;
+            Log.d("BDD", reqSQL);
+
+            //Exécution requete
+            Cursor unCurseur = db.rawQuery(reqSQL, null);
+            Log.d("BDD","Le curseur contient " + unCurseur.getCount() + " lignes");
+            return unCurseur;
+        }
 
     }
 

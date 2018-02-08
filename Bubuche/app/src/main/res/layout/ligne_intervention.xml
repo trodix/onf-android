@@ -18,7 +18,7 @@
             <TextView
                 android:id="@+id/tvLibIdIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvLibIdIntervention"
                 android:textColor="@android:color/darker_gray" />
@@ -26,7 +26,7 @@
             <TextView
                 android:id="@+id/tvLibTypeIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvLibTypeIntervention"
                 android:textColor="@android:color/darker_gray" />
@@ -34,17 +34,10 @@
             <TextView
                 android:id="@+id/tvLibDateIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvLibDateIntervention"
                 android:textColor="@android:color/darker_gray" />
-
-            <ImageButton
-                android:id="@+id/btDetailsFicheIntervention"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@android:drawable/ic_menu_set_as" />
 
         </LinearLayout>
     </LinearLayout>
