@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import metier.Arbre;
+import metier.Intervention;
 
 /**
  * Created by fabien.ladouce on 08/02/2018.
@@ -59,41 +60,5 @@ public class InterventionDAO {
         public void close() {
             db.close();
         }
-
-
-        public Cursor readLesArbres() {
-            //Requete
-            String reqSQL = "SELECT idArbre as '_id', libelleFrancais, commune, datePlantation, cp, genre, espece FROM " + TABLE_ARBRE;
-            Log.d("BDD", reqSQL);
-
-            //Exécution requete
-            Cursor unCurseur = db.rawQuery(reqSQL, null);
-            Log.d("BDD","Le curseur contient " + unCurseur.getCount() + " lignes");
-            return unCurseur;
-        }
-
-        public boolean unArbreServeur(int idArbre){
-
-            String reqSQL = "SELECT idArbre FROM " + TABLE_INTERVENTION + " WHERE idArbre = " + idArbre + ";";
-
-            Cursor idExist = db.rawQuery(reqSQL, null);
-
-            return idExist.getCount() > 0;
-        }
-
-        public Cursor readArbreDetail(int id) {
-            //Requete
-            String reqSQL = "SELECT idArbre as '_id', libelleFrancais, commune, datePlantation, cp, genre, espece FROM " + TABLE_ARBRE + " WHERE idArbre = " + id;
-            Log.d("BDD", reqSQL);
-
-            //Exécution requete
-            Cursor unCurseur = db.rawQuery(reqSQL, null);
-            Log.d("BDD","Ligne curseur :  " + unCurseur.getCount());
-
-            return unCurseur;
-        }
-
-    }
-
 
 }

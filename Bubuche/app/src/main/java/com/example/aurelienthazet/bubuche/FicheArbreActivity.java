@@ -16,6 +16,7 @@ public class FicheArbreActivity extends AppCompatActivity {
 
     private Button btAccueilFicheArbre;
     private Button btCreerIntervention;
+    private Button btAfficherIntervention;
 
     private TextView tvDataIdFicheArbre;
     private TextView tvDataCommuneFicheArbre;
@@ -29,7 +30,16 @@ public class FicheArbreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_arbre);
 
-        btCreerIntervention = (Button)findViewById((R.id.btCreerIntervention));
+        btCreerIntervention = (Button) findViewById(R.id.btCreationIntervention);
+        btCreerIntervention.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(FicheArbreActivity.this, CreationInterventionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        /*btAfficherIntervention = (Button)findViewById((R.id.btCreerIntervention));
         btCreerIntervention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +51,7 @@ public class FicheArbreActivity extends AppCompatActivity {
 
                 startActivity(intent);
             }
-        });
+        });*/
 
         afficherDetailsArbre();
         /*btAccueilFicheArbre = (Button) findViewById(R.id.btAccueilFicheArbre);
