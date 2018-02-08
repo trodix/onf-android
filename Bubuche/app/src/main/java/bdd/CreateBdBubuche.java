@@ -26,14 +26,14 @@ public class CreateBdBubuche extends SQLiteOpenHelper {
                 "espece TEXT NOT NULL);"+
 
                 "CREATE TABLE " + TABLE_INTERVENTION +
-                "idIntervention INTEGER PRIMARY KEY,"+
+                "( idIntervention INTEGER PRIMARY KEY,"+
                 "dateIntervention TEXT NOT NULL,"+
                 "heureIntervention TEXT NOT NULL,"+
-                "observations TEXT;" +
+                "observations TEXT);" +
 
                 "CREATE TABLE " + TABLE_TYPE_INTERVENTION +
-                "idType INTEGER PRIMARY KEY,"+
-                "libelleType TEXT NOT NULL;";
+                "( idType INTEGER PRIMARY KEY,"+
+                "libelleType TEXT NOT NULL);";
 
         // Constructeur, à générer automatiquement
         public CreateBdBubuche(Context context, String name, SQLiteDatabase.CursorFactory
@@ -64,11 +64,11 @@ public class CreateBdBubuche extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE " + TABLE_ARBRE + ";");
             Log.d("BDD", "Table arbre supprimée");
 
-            db.execSQL("DROP TABLE " + TABLE_INTERVENTION + ";");
+            /*db.execSQL("DROP TABLE " + TABLE_INTERVENTION + ";");
             Log.d("BDD", "Table intervention supprimée");
 
             db.execSQL("DROP TABLE " + TABLE_TYPE_INTERVENTION + ";");
-            Log.d("BDD", "Table typeIntervention supprimée");
+            Log.d("BDD", "Table typeIntervention supprimée");*/
             onCreate(db);
         }
     }
