@@ -7,6 +7,7 @@ package metier;
 public class Intervention {
 
     private int id;
+    private int idArbre;
     private String dateIntervention;
     private String heureIntervention;
     private String observations;
@@ -14,14 +15,15 @@ public class Intervention {
     public Intervention() {
     }
 
-    public Intervention(String dateIntervention, String heureIntervention, String observations) {
+    public Intervention( int idArbre,String dateIntervention, String heureIntervention, String observations) {
         this.dateIntervention = dateIntervention;
         this.heureIntervention = heureIntervention;
         this.observations = observations;
     }
 
-    public Intervention(int id, String dateIntervention, String heureIntervention, String observations) {
+    public Intervention(int id, int idArbre,String dateIntervention, String heureIntervention, String observations) {
         this.id = id;
+        this.idArbre = idArbre;
         this.dateIntervention = dateIntervention;
         this.heureIntervention = heureIntervention;
         this.observations = observations;
@@ -29,6 +31,14 @@ public class Intervention {
 
     public int getId() {
         return id;
+    }
+
+    public int getIdArbre() {
+        return idArbre;
+    }
+
+    public void setIdArbre(int idArbre) {
+        this.idArbre = idArbre;
     }
 
     public void setId(int id) {
