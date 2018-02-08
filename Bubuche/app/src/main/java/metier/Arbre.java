@@ -88,5 +88,18 @@ public class Arbre {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
+    @Override
+    public String toString() {
+        return "Arbre{" +
+                "id=" + id +
+                ", libelleFrancais='" + libelleFrancais + '\'' +
+                ", datePlantation='" + datePlantation + '\'' +
+                ", commune='" + commune + '\'' +
+                ", cp='" + cp + '\'' +
+                ", espece='" + espece + '\'' +
+                ", genre='" + genre + '\'' +
+                '}';
+    }
 }
 

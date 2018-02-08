@@ -17,8 +17,8 @@ public class LigneArbreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ligne_arbre);
 
-        //Les lignes suivantes permettent de rediriger l'utilisateur vers la page concernée après un click sur un bouton
-        /*btDetailsFicheArbre = (Button) findViewById(R.id.btDetailsFicheArbre);
+        /*//Les lignes suivantes permettent de rediriger l'utilisateur vers la page concernée après un click sur un bouton
+        btDetailsFicheArbre = (Button) findViewById(R.id.btDetailsFicheArbre);
         btDetailsFicheArbre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {

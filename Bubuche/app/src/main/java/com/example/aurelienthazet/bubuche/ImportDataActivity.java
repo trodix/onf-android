@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -116,6 +118,7 @@ public class ImportDataActivity extends AppCompatActivity {
                     Log.i("httpmen", "unArbre " + unArbre.toString());;
                     //ajout de l'arbre à la collection
                     lesArbres.add(unArbre);
+                    Log.i("httpmen", "lesArbres " + unArbre.toString());
                 }
                 Log.i("httpmen", "lesArbres " + lesArbres.toString());
 
@@ -144,25 +147,31 @@ public class ImportDataActivity extends AppCompatActivity {
                 HashMap<String,String> hashMap = new HashMap<>();
                 hashMap.put("idArbre", Integer.toString(unArbre.getId()));
                 hashMap.put("libelleFrancais", unArbre.getLibelleFrancais());
+                hashMap.put("datePlantation", unArbre.getDatePlantation());
                 hashMap.put("commune",unArbre.getCommune());
                 hashMap.put("cp",unArbre.getCp());
                 hashMap.put("genre",unArbre.getGenre());
                 hashMap.put("espece",unArbre.getEspece());
                 lesArbresE.add(hashMap);
 
-                Arbre leArbre = new Arbre(unArbre.getId(),unArbre.getLibelleFrancais(),unArbre.getCommune(),unArbre.getCp(),unArbre.getDatePlantation(),unArbre.getGenre(),unArbre.getEspece());
+                Arbre leArbre = new Arbre(unArbre.getId(),unArbre.getLibelleFrancais(),unArbre.getDatePlantation(),unArbre.getCommune(),unArbre.getCp(),unArbre.getEspece(),unArbre.getGenre());
                 Log.i("httparbre", String.valueOf(leArbre));
 
-                /*if(unArbreDAO.uneVisiteServeur(unHabitant.getId())){
+                if(unArbreDAO.unArbreServeur(unArbre.getId())){
 
-                }else{*/
+                }else{
                    unArbreDAO.create(leArbre);
-                //}
-
-
-
+                }
 
             }
+
+            String[] from = new String[] {"_id","espece", "cp"};
+            int[] to = new int[] {R.id.tvLibIdArbre, R.id.tvLibEspeceArbre, R.id.tvLibCpArbre};
+            SimpleAdapter dataAdapter = new SimpleAdapter(getApplicationContext(), lesArbresE, R.layout.ligne_arbre, from, to);
+
+            //Affectation Adapter list view
+            ListView lvArbre = (ListView) findViewById(R.id.lvListeArbres);
+            lvArbre.setAdapter(dataAdapter);
         }
     }
 }

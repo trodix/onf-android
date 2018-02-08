@@ -19,15 +19,16 @@
             <TextView
                 android:id="@+id/tvLibIdArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvLibIdArbre"
+                android:textAlignment="center"
                 android:textColor="@android:color/darker_gray" />
 
             <TextView
                 android:id="@+id/tvLibEspeceArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvLibEspeceArbre"
                 android:textColor="@android:color/darker_gray" />
@@ -35,17 +36,10 @@
             <TextView
                 android:id="@+id/tvLibCpArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvLibCpArbre"
                 android:textColor="@android:color/darker_gray" />
-
-            <ImageButton
-                android:id="@+id/btDetailsFicheArbre"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                app:srcCompat="@android:drawable/ic_menu_set_as" />
 
         </LinearLayout>
     </LinearLayout>

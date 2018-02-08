@@ -14,29 +14,29 @@ import metier.Arbre;
 
 public class ArbreDAO {
 
-        private static final int VERSION_BDD = 9;
-        private static final String NOM_BDD = "bubuche.db";
-        private static final String TABLE_ARBRE = "arbre";
-        protected SQLiteDatabase db = null;
-        protected CreateBdBubuche createDb = null;
-        /**
-         * Constructeur
-         * @param context
-         */
-        public ArbreDAO(Context context) {
-            createDb = new CreateBdBubuche(context, NOM_BDD, null, VERSION_BDD);
-        }
-        /**
-         * Ouverture de la base en mode écriture
-         * @return
-         */
-        public SQLiteDatabase open() {
-            db = createDb.getWritableDatabase();
-            Log.d("BDD", "Base ouverte : " +  db.isDbLockedByCurrentThread());
-            Log.d("BDD", "Base ouverte : " +  db.isDbLockedByOtherThreads());
-            Log.d("BDD", "Base ouverte");
-            return db;
-        }
+    private static final int VERSION_BDD = 10;
+    private static final String NOM_BDD = "bubuche.db";
+    private static final String TABLE_ARBRE = "arbre";
+    protected SQLiteDatabase db = null;
+    protected CreateBdBubuche createDb = null;
+    /**
+     * Constructeur
+     * @param context
+     */
+    public ArbreDAO(Context context) {
+        createDb = new CreateBdBubuche(context, NOM_BDD, null, VERSION_BDD);
+    }
+    /**
+     * Ouverture de la base en mode écriture
+     * @return
+     */
+    public SQLiteDatabase open() {
+        db = createDb.getWritableDatabase();
+        Log.d("BDD", "Base ouverte : " +  db.isDbLockedByCurrentThread());
+        Log.d("BDD", "Base ouverte : " +  db.isDbLockedByOtherThreads());
+        Log.d("BDD", "Base ouverte");
+        return db;
+    }
 
     public long create(Arbre unArbre) {
         ContentValues values = new ContentValues(); // Ensemble des valeurs à insérer, (eq HashMap)
@@ -56,23 +56,46 @@ public class ArbreDAO {
         Log.d("BDD","create,libelleEspece :  " + unArbre.getEspece());
         return db.insert(TABLE_ARBRE, null, values);
     }
-        /**
-         * Fermeture de la base
-         */
-        public void close() {
-            db.close();
-        }
 
-
-        public Cursor readLesArbres() {
-            //Requete
-            String reqSQL = "SELECT idArbre as '_id', libelleFrancais, commune, datePlantation, cp, genre, espece FROM " + TABLE_ARBRE;
-            Log.d("BDD", reqSQL);
-
-            //Exécution requete
-            Cursor unCurseur = db.rawQuery(reqSQL, null);
-            Log.d("BDD","Le curseur contient " + unCurseur.getCount() + " lignes");
-            return unCurseur;
-        }
+    /**
+     * Fermeture de la base
+     */
+    public void close() {
+        db.close();
     }
+
+
+    public Cursor readLesArbres() {
+        //Requete
+        String reqSQL = "SELECT idArbre as '_id', libelleFrancais, commune, datePlantation, cp, genre, espece FROM " + TABLE_ARBRE;
+        Log.d("BDD", reqSQL);
+
+        //Exécution requete
+        Cursor unCurseur = db.rawQuery(reqSQL, null);
+        Log.d("BDD","Le curseur contient " + unCurseur.getCount() + " lignes");
+        return unCurseur;
+    }
+
+    public boolean unArbreServeur(int idArbre){
+
+        String reqSQL = "SELECT idArbre FROM " + TABLE_ARBRE + " WHERE idArbre = " + idArbre + ";";
+
+        Cursor idExist = db.rawQuery(reqSQL, null);
+
+        return idExist.getCount() > 0;
+    }
+
+    public Cursor readArbreDetail(int id) {
+        //Requete
+        String reqSQL = "SELECT idArbre as '_id', libelleFrancais, commune, datePlantation, cp, genre, espece FROM " + TABLE_ARBRE + " WHERE idArbre = " + id;
+        Log.d("BDD", reqSQL);
+
+        //Exécution requete
+        Cursor unCurseur = db.rawQuery(reqSQL, null);
+        Log.d("BDD","Ligne curseur :  " + unCurseur.getCount());
+
+        return unCurseur;
+    }
+
+}
 

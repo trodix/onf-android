@@ -40,116 +40,126 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvIdFicheArbre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvIdFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataIdFicheArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataIdFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvCommuneFicheArbre"
                 android:layout_width="18dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvCommuneFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataCommuneFicheArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataCommuneFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvDatePlantaFicheArbre"
                 android:layout_width="18dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDatePlantaFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataDatePlantaFicheArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataDatePlantaFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvGenreFicheArbre"
                 android:layout_width="18dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvGenreFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataGenreFicheArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataGenreFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvEspeceFicheArbre"
                 android:layout_width="18dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvEspeceFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataEspeceFicheArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataEspeceFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -197,24 +207,16 @@
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/tvDetailsInterventionFicheArbre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/tvDetailsInterventionFicheArbre"
-                android:textColor="@android:color/background_dark"
-                android:textSize="18sp" />
         </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="253dp">
+            android:layout_height="156dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <ListView
                     android:layout_width="match_parent"
@@ -224,7 +226,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Space
