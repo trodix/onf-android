@@ -139,7 +139,7 @@ public class ImportDataActivity extends AppCompatActivity {
 
 
             Log.d("BDD", "Open réussi");
-            Cursor c =  unArbreDAO.readLesArbres();
+
 
             ArrayList<HashMap<String, String>> lesArbresE = new ArrayList<>();
 
