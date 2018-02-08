@@ -23,15 +23,16 @@ public class CreateBdBubuche extends SQLiteOpenHelper {
                 "cp TEXT NOT NULL, " +
                 "datePlantation TEXT NOT NULL," +
                 "genre TEXT NOT NULL," +
-                "espece TEXT NOT NULL);"+
+                "espece TEXT NOT NULL);";
 
-                "CREATE TABLE " + TABLE_INTERVENTION +
-                "( idIntervention INTEGER PRIMARY KEY,"+
+        private static final String CREATE_BDD_INTERVENTION = "CREATE TABLE " + TABLE_INTERVENTION +
+                " ( idIntervention INTEGER PRIMARY KEY,"+
+                "idArbre INTERGER,"+
                 "dateIntervention TEXT NOT NULL,"+
                 "heureIntervention TEXT NOT NULL,"+
-                "observations TEXT);" +
+                "observations TEXT) ;";
 
-                "CREATE TABLE " + TABLE_TYPE_INTERVENTION +
+        private static final String CREATE_BDD_TYPE_INTERVENTION = "CREATE TABLE " + TABLE_TYPE_INTERVENTION +
                 "( idType INTEGER PRIMARY KEY,"+
                 "libelleType TEXT NOT NULL);";
 
@@ -49,6 +50,8 @@ public class CreateBdBubuche extends SQLiteOpenHelper {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(CREATE_BDD);
+            db.execSQL(CREATE_BDD_INTERVENTION);
+            db.execSQL(CREATE_BDD_TYPE_INTERVENTION);
             Log.d("BDD", "Base créée");
         }
 
