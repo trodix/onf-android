@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aurelienthazet.bubuche">
 
+    <!-- Intent permission -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,11 +26,11 @@
         <activity android:name=".FicheArbreActivity" />
         <activity android:name=".FicheInterventionActivity" />
         <activity android:name=".CreationInterventionActivity" />
-        <activity android:name=".ImportDataActivity"></activity>
+        <activity android:name=".ImportDataActivity" />
+        <activity
+            android:name=".EnvoiDataActivity"
+            android:label="@string/title_activity_envoi_data"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-
-    <!-- Intent permission -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

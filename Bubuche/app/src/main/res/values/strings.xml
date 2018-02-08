@@ -51,5 +51,6 @@
     <string name="ptHeureCreationIntervention">Heure</string>
     <string name="ptDateCreationIntervention">Date</string>
     <string name="mtObsCreationIntervention">Entrer une observation</string>
-    <string name="btCreationIntervention">Créer</string>/>
+    <string name="btCreationIntervention">Créer</string>
+    <string name="title_activity_envoi_data">EnvoiDataActivity</string>/>
 </resources>
