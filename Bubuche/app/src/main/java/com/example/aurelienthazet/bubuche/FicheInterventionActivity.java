@@ -17,13 +17,13 @@ public class FicheInterventionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_intervention);
 
-        btAccueilFicheIntervention = (Button) findViewById(R.id.btAccueilFicheIntervention);
+        /*btAccueilFicheIntervention = (Button) findViewById(R.id.btAccueilFicheIntervention);
         btAccueilFicheIntervention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(FicheInterventionActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }
