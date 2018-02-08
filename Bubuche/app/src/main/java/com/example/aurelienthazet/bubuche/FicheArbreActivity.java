@@ -15,6 +15,8 @@ import bdd.ArbreDAO;
 public class FicheArbreActivity extends AppCompatActivity {
 
     private Button btAccueilFicheArbre;
+    private Button btCreerIntervention;
+
     private TextView tvDataIdFicheArbre;
     private TextView tvDataCommuneFicheArbre;
     private TextView tvDataDatePlantationFicheArbre;
@@ -27,6 +29,19 @@ public class FicheArbreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_arbre);
 
+        btCreerIntervention = (Button)findViewById((R.id.btCreerIntervention));
+        btCreerIntervention.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Récupération de l'id de l'arbre en chaine de caractère + conversion en int
+                int id = Integer.parseInt(getIntent().getStringExtra("selected-item"));
+                Intent intent = new Intent(FicheArbreActivity.this, FicheInterventionActivity.class);
+                intent.putExtra("idArbre", id);
+
+                startActivity(intent);
+            }
+        });
 
         afficherDetailsArbre();
         /*btAccueilFicheArbre = (Button) findViewById(R.id.btAccueilFicheArbre);
@@ -37,6 +52,8 @@ public class FicheArbreActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });*/
+
+
     }
 
     private void afficherDetailsArbre(){
