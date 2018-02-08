@@ -30,7 +30,7 @@ public class FicheArbreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_arbre);
 
-        btCreerIntervention = (Button) findViewById(R.id.btCreationIntervention);
+        btCreerIntervention = (Button) findViewById(R.id.btCreerIntervention);
         btCreerIntervention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -98,13 +98,6 @@ public class FicheArbreActivity extends AppCompatActivity {
         tvDataDatePlantationFicheArbre.setText(detailArbre.getString(3));
         tvDataGenreFicheArbre.setText(detailArbre.getString(4));
         tvDataEspeceFicheArbre.setText(detailArbre.getString(5));
-
-
-
-
-
-
-
 
     }
 }

@@ -17,13 +17,13 @@ public class CreationInterventionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation_intervention);
 
-        btAccueilCreerIntervention = (Button) findViewById(R.id.btAccueilCreerIntervention);
+        /*btAccueilCreerIntervention = (Button) findViewById(R.id.btAccueilCreerIntervention);
         btAccueilCreerIntervention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(CreationInterventionActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }
