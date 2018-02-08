@@ -45,16 +45,21 @@
 
             <TextView
                 android:id="@+id/tvIdFicheArbre"
-                android:layout_width="18dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvIdFicheArbre"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataIdFicheArbre"
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataIdFicheArbre"
@@ -70,19 +75,25 @@
 
             <TextView
                 android:id="@+id/tvCommuneFicheArbre"
-                android:layout_width="18dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvCommuneFicheArbre"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataCommuneFicheArbre"
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="35dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataCommuneFicheArbre"
+                android:textAlignment="viewStart"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
@@ -95,19 +106,25 @@
 
             <TextView
                 android:id="@+id/tvDatePlantaFicheArbre"
-                android:layout_width="18dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDatePlantaFicheArbre"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataDatePlantaFicheArbre"
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataDatePlantaFicheArbre"
+                android:textAlignment="viewStart"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
@@ -120,19 +137,25 @@
 
             <TextView
                 android:id="@+id/tvGenreFicheArbre"
-                android:layout_width="18dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvGenreFicheArbre"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataGenreFicheArbre"
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataGenreFicheArbre"
+                android:textAlignment="viewStart"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
@@ -145,19 +168,25 @@
 
             <TextView
                 android:id="@+id/tvEspeceFicheArbre"
-                android:layout_width="18dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvEspeceFicheArbre"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataEspeceFicheArbre"
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataEspeceFicheArbre"
+                android:textAlignment="viewStart"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
