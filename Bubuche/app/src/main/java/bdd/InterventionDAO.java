@@ -90,7 +90,7 @@ public class InterventionDAO {
 
     public Cursor readDetailInterventions(int idIntervention) {
         //Requete
-        String reqSQL = "SELECT idIntervention as '_id', dateIntervention, heureIntervention, observations FROM " + TABLE_INTERVENTION;
+        String reqSQL = "SELECT * FROM " + TABLE_INTERVENTION + " WHERE idIntervention = "+idIntervention;
         Log.d("BDD", reqSQL);
 
         //Exécution requete

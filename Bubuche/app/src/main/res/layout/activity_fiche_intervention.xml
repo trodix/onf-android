@@ -55,16 +55,21 @@
 
             <TextView
                 android:id="@+id/tvIdFicheIntervention"
-                android:layout_width="20dp"
+                android:layout_width="115dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvIdFicheIntervention"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataIdFicheIntervention"
-                android:layout_width="wrap_content"
+                android:layout_width="191dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataIdFicheArbre"
@@ -79,16 +84,21 @@
 
             <TextView
                 android:id="@+id/tvIdArbreFicheIntervention"
-                android:layout_width="20dp"
+                android:layout_width="113dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvIdArbreFicheIntervention"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataIdArbreFicheIntervention"
-                android:layout_width="wrap_content"
+                android:layout_width="189dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataIdArbreFicheIntervention"
@@ -103,16 +113,21 @@
 
             <TextView
                 android:id="@+id/tvTypeFicheIntervention"
-                android:layout_width="20dp"
+                android:layout_width="114dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvTypeFicheIntervention"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataTypeFicheIntervention"
-                android:layout_width="wrap_content"
+                android:layout_width="189dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataTypeFicheIntervention"
@@ -127,16 +142,21 @@
 
             <TextView
                 android:id="@+id/tvDateFicheIntervention"
-                android:layout_width="20dp"
+                android:layout_width="172dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDateFicheIntervention"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataDateFicheIntervention"
-                android:layout_width="wrap_content"
+                android:layout_width="247dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataDateFicheIntervention"
@@ -151,16 +171,21 @@
 
             <TextView
                 android:id="@+id/tvHeureFicheIntervention"
-                android:layout_width="20dp"
+                android:layout_width="114dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvHeureFicheIntervention"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18sp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvDataHeureFicheIntervention"
-                android:layout_width="wrap_content"
+                android:layout_width="188dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataHeureFicheIntervention"

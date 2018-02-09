@@ -362,11 +362,14 @@ public class FicheArbreActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 TextView listTextIntervention = (TextView) findViewById(R.id.tvLibIdIntervention);
+                    TextView listTypeIntervention = (TextView) findViewById(R.id.tvLibTypeIntervention);
                 String text = listTextIntervention.getText().toString();
+                String type = listTypeIntervention.getText().toString();
                 int id = i +1;
                 Log.d("BDD", "Id de l'intervention (Evenement) : " + id);
                 Intent intent = new Intent(FicheArbreActivity.this, FicheInterventionActivity.class);
-                intent.putExtra("selected-item", String.valueOf(id));
+                intent.putExtra("typeIntervention", type);
+                intent.putExtra("idIntervention", String.valueOf(id));
                 startActivity(intent);
                 }
             });
