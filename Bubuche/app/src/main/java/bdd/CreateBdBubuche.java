@@ -26,11 +26,11 @@ public class CreateBdBubuche extends SQLiteOpenHelper {
                 "espece TEXT NOT NULL);";
 
         private static final String CREATE_BDD_INTERVENTION = "CREATE TABLE " + TABLE_INTERVENTION +
-                " ( idIntervention INTEGER PRIMARY KEY,"+
-                "idArbre INTERGER,"+
+                "( idIntervention INTEGER PRIMARY KEY AUTOINCREMENT,"+
+                "idArbre INTEGER,"+
                 "dateIntervention TEXT NOT NULL,"+
                 "heureIntervention TEXT NOT NULL,"+
-                "observations TEXT) ;";
+                "observations TEXT);";
 
         private static final String CREATE_BDD_TYPE_INTERVENTION = "CREATE TABLE " + TABLE_TYPE_INTERVENTION +
                 "( idType INTEGER PRIMARY KEY,"+
@@ -67,11 +67,11 @@ public class CreateBdBubuche extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE " + TABLE_ARBRE + ";");
             Log.d("BDD", "Table arbre supprimée");
 
-            /*db.execSQL("DROP TABLE " + TABLE_INTERVENTION + ";");
+            db.execSQL("DROP TABLE " + TABLE_INTERVENTION + ";");
             Log.d("BDD", "Table intervention supprimée");
 
             db.execSQL("DROP TABLE " + TABLE_TYPE_INTERVENTION + ";");
-            Log.d("BDD", "Table typeIntervention supprimée");*/
+            Log.d("BDD", "Table typeIntervention supprimée");
             onCreate(db);
         }
     }

@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import metier.Arbre;
-import metier.Intervention;
 
 /**
  * Created by aurelien.thazet on 06/02/2018.
@@ -15,12 +14,10 @@ import metier.Intervention;
 
 public class ArbreDAO {
 
-    private static final int VERSION_BDD = 13;
+    private static final int VERSION_BDD = 17;
     private static final String NOM_BDD = "bubuche.db";
     private static final String TABLE_ARBRE = "arbre";
     protected SQLiteDatabase db = null;
-    private static final String TABLE_INTERVENTION = "intervention";
-    private static final String TABLE_TYPE_INTERVENTION = "typeIntervention";
     protected CreateBdBubuche createDb = null;
     /**
      * Constructeur
@@ -28,15 +25,6 @@ public class ArbreDAO {
      */
     public ArbreDAO(Context context) {
         createDb = new CreateBdBubuche(context, NOM_BDD, null, VERSION_BDD);
-    }
-
-    public boolean uneInterventionServeur(int idIntervention){
-
-        String reqSQL = "SELECT idIntervention FROM " + TABLE_INTERVENTION + " WHERE idIntervention = " + idIntervention + ";";
-
-        Cursor idExist = db.rawQuery(reqSQL, null);
-
-        return idExist.getCount() > 0;
     }
     /**
      * Ouverture de la base en mode écriture
@@ -50,25 +38,7 @@ public class ArbreDAO {
         return db;
     }
 
-    public long createIntervention(Intervention uneIntervention) {
-        ContentValues values = new ContentValues(); // Ensemble des valeurs à insérer, (eq HashMap)
-        values.put("idIntervention", uneIntervention.getId());
-        values.put("idArbre", uneIntervention.getIdArbre());
-        values.put("dateIntervention", uneIntervention.getDateIntervention());
-        values.put("heureIntervention", uneIntervention.getHeureIntervention());
-        values.put("observations", uneIntervention.getObservations());
 
-        Log.d("BDD","create,id :  " + uneIntervention.getId());
-        Log.d("BDD","create,idArbre :  " + uneIntervention.getIdArbre());
-        Log.d("BDD","create,date intervention :  " + uneIntervention.getDateIntervention());
-        Log.d("BDD","create,heure Intervention :  " + uneIntervention.getHeureIntervention());
-        Log.d("BDD","create,Observations :  " + uneIntervention.getObservations());
-        return db.insert(TABLE_INTERVENTION, null, values);
-    }
-
-    public CreateBdBubuche getCreateDb() {
-        return createDb;
-    }
 
     public long create(Arbre unArbre) {
         ContentValues values = new ContentValues(); // Ensemble des valeurs à insérer, (eq HashMap)

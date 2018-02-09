@@ -16,11 +16,9 @@ import metier.Intervention;
 public class InterventionDAO {
 
 
-    private static final int VERSION_BDD = 12;
-    private static final String NOM_BDD = "bubuche.db";
-    private static final String TABLE_ARBRE = "arbre";
-
     protected SQLiteDatabase db = null;
+    private static final int VERSION_BDD = 17;
+    private static final String NOM_BDD = "bubuche.db";
     protected CreateBdBubuche createDb = null;
     private static final String TABLE_INTERVENTION = "intervention";
     private static final String TABLE_TYPE_INTERVENTION = "typeIntervention";
@@ -30,7 +28,7 @@ public class InterventionDAO {
      * @param context
      */
     public InterventionDAO(Context context) {
-
+        createDb = new CreateBdBubuche(context, NOM_BDD, null, VERSION_BDD);
     }
     /**
      * Ouverture de la base en mode écriture
@@ -38,16 +36,18 @@ public class InterventionDAO {
      */
 
     public SQLiteDatabase open() {
-        /*db = createDb.getWritableDatabase();
+        db = createDb.getWritableDatabase();
         Log.d("BDD", "Base ouverte : " +  db.isDbLockedByCurrentThread());
         Log.d("BDD", "Base ouverte : " +  db.isDbLockedByOtherThreads());
-        Log.d("BDD", "Base ouverte");*/
+        Log.d("BDD", "Base ouverte");
         return db;
     }
 
     public long create(Intervention uneIntervention) {
         ContentValues values = new ContentValues(); // Ensemble des valeurs à insérer, (eq HashMap)
-        values.put("idIntervention", uneIntervention.getId());
+        if(uneIntervention.getId() != 0){
+            values.put("idIntervention", uneIntervention.getId());
+        }
         values.put("idArbre", uneIntervention.getIdArbre());
         values.put("dateIntervention", uneIntervention.getDateIntervention());
         values.put("heureIntervention", uneIntervention.getHeureIntervention());
@@ -87,6 +87,7 @@ public class InterventionDAO {
         Log.d("BDD","Le curseur contient " + unCurseur.getCount() + " lignes");
         return unCurseur;
     }
+
 
 }
 
