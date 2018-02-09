@@ -16,21 +16,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvFicheIntervention"
                 android:layout_width="295dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="@string/tvFicheIntervention"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/colorAccent"
                 android:textSize="24sp" />
 
             <ImageButton
                 android:id="@+id/btAccueilFicheIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/icon_home" />
+                app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -45,19 +55,21 @@
 
             <TextView
                 android:id="@+id/tvIdFicheIntervention"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvIdFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataIdFicheIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataIdFicheArbre"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -68,18 +80,20 @@
             <TextView
                 android:id="@+id/tvIdArbreFicheIntervention"
                 android:layout_width="20dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvIdArbreFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataIdArbreFicheIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/tvDataIdArbreFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -90,18 +104,20 @@
             <TextView
                 android:id="@+id/tvTypeFicheIntervention"
                 android:layout_width="20dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvTypeFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataTypeFicheIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataTypeFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -112,18 +128,20 @@
             <TextView
                 android:id="@+id/tvDateFicheIntervention"
                 android:layout_width="20dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDateFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tvDataTypeFicheIntervention"
+                android:id="@+id/tvDataDateFicheIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
-                android:text="@string/tvDataTypeFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:text="@string/tvDataDateFicheIntervention"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,18 +152,20 @@
             <TextView
                 android:id="@+id/tvHeureFicheIntervention"
                 android:layout_width="20dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvHeureFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDataHeureFicheIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvDataHeureFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -156,17 +176,18 @@
             <TextView
                 android:id="@+id/tvObsFicheIntervention"
                 android:layout_width="20dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvObsFicheIntervention"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <EditText
             android:id="@+id/mtObsFicheIntervention"
             android:layout_width="match_parent"
-            android:layout_height="314dp"
+            android:layout_height="265dp"
             android:ems="10"
             android:gravity="top|left"
             android:inputType="textMultiLine"

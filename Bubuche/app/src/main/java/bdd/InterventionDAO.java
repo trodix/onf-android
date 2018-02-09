@@ -17,7 +17,7 @@ public class InterventionDAO {
 
 
     protected SQLiteDatabase db = null;
-    private static final int VERSION_BDD = 17;
+    private static final int VERSION_BDD = 24;
     private static final String NOM_BDD = "bubuche.db";
     protected CreateBdBubuche createDb = null;
     private static final String TABLE_INTERVENTION = "intervention";
@@ -78,6 +78,17 @@ public class InterventionDAO {
     }
 
     public Cursor readLesInterventions() {
+        //Requete
+        String reqSQL = "SELECT idIntervention as '_id', dateIntervention, heureIntervention, observations FROM " + TABLE_INTERVENTION;
+        Log.d("BDD", reqSQL);
+
+        //Exécution requete
+        Cursor unCurseur = db.rawQuery(reqSQL, null);
+        Log.d("BDD","Le curseur contient " + unCurseur.getCount() + " lignes");
+        return unCurseur;
+    }
+
+    public Cursor readDetailInterventions(int idIntervention) {
         //Requete
         String reqSQL = "SELECT idIntervention as '_id', dateIntervention, heureIntervention, observations FROM " + TABLE_INTERVENTION;
         Log.d("BDD", reqSQL);

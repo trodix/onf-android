@@ -16,41 +16,42 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvCreationIntervention"
                 android:layout_width="295dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="@string/tvCreationIntervention"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/colorAccent"
                 android:textSize="24sp" />
 
             <ImageButton
                 android:id="@+id/btAccueilCreerIntervention"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/icon_home" />
+                app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp" />
+            android:layout_height="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvCreationInterventionIdArbre"
-                android:layout_width="290dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tvCreationInterventionIdArbre"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -84,7 +85,7 @@
         <EditText
             android:id="@+id/mtObsCreationIntervention"
             android:layout_width="match_parent"
-            android:layout_height="234dp"
+            android:layout_height="249dp"
             android:ems="10"
             android:gravity="top|left"
             android:hint="@string/mtObsCreationIntervention"

@@ -17,6 +17,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tvListeArbres"
                 android:layout_width="295dp"
@@ -24,9 +29,14 @@
                 android:layout_weight="1"
                 android:text="@string/tvListeArbres"
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/colorAccent"
                 android:textSize="24sp"
                 android:typeface="normal" />
+
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -84,7 +94,7 @@
                 <ListView
                     android:id="@+id/lvListeArbres"
                     android:layout_width="match_parent"
-                    android:layout_height="401dp">
+                    android:layout_height="400dp">
 
                 </ListView>
             </LinearLayout>

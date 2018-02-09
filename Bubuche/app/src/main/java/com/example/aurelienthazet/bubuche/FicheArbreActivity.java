@@ -9,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -41,7 +43,7 @@ public class FicheArbreActivity extends AppCompatActivity {
     //Progress Dialog
     private ProgressDialog pDialog;
 
-    private Button btAccueilFicheArbre;
+    private ImageButton btAccueilFicheArbre;
     private Button btCreerIntervention;
     private Button btAfficherIntervention;
 
@@ -59,6 +61,7 @@ public class FicheArbreActivity extends AppCompatActivity {
     private static String urlLesTypesInterventions = "http://10.121.38.143/onf/api/getLesTypesIntervention";
 
     private TextView tvDataIdFicheArbre;
+    private TextView tvDataLibelleFicheArbre;
     private TextView tvDataCommuneFicheArbre;
     private TextView tvDataDatePlantationFicheArbre;
     private TextView tvDataGenreFicheArbre;
@@ -84,6 +87,7 @@ public class FicheArbreActivity extends AppCompatActivity {
             }
         });
         afficherDetailsArbre();
+
         /*btAfficherIntervention = (Button)findViewById((R.id.btCreerIntervention));
         btCreerIntervention.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,14 +104,14 @@ public class FicheArbreActivity extends AppCompatActivity {
 
         new chargerLesInterventions().execute();
 
-        /*btAccueilFicheArbre = (Button) findViewById(R.id.btAccueilFicheArbre);
+        btAccueilFicheArbre = (ImageButton) findViewById(R.id.btAccueilFicheArbre);
         btAccueilFicheArbre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(FicheArbreActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
 
     }
@@ -130,6 +134,7 @@ public class FicheArbreActivity extends AppCompatActivity {
         detailArbre.moveToNext();
 
         tvDataIdFicheArbre = (TextView)findViewById(R.id.tvDataIdFicheArbre);
+        tvDataLibelleFicheArbre = (TextView)findViewById(R.id.tvDataLibelleFicheArbre);
         tvDataCommuneFicheArbre = (TextView)findViewById(R.id.tvDataCommuneFicheArbre);
         tvDataDatePlantationFicheArbre = (TextView)findViewById(R.id.tvDataDatePlantaFicheArbre);
         tvDataEspeceFicheArbre = (TextView)findViewById(R.id.tvDataEspeceFicheArbre);
@@ -138,6 +143,7 @@ public class FicheArbreActivity extends AppCompatActivity {
 
         Log.d("BDD", "Id Arbre : " + detailArbre.getInt(0));
         tvDataIdFicheArbre.setText(String.valueOf(detailArbre.getInt(0)));
+        tvDataLibelleFicheArbre.setText(detailArbre.getString(1));
         tvDataCommuneFicheArbre.setText(detailArbre.getString(2));
         tvDataDatePlantationFicheArbre.setText(detailArbre.getString(3));
         tvDataGenreFicheArbre.setText(detailArbre.getString(4));
@@ -351,6 +357,19 @@ public class FicheArbreActivity extends AppCompatActivity {
             //Affectation Adapter list view
             ListView lvListeIntervention = (ListView) findViewById(R.id.lvListeIntervention);
             lvListeIntervention.setAdapter(dataAdapter);
+
+            lvListeIntervention.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                TextView listTextIntervention = (TextView) findViewById(R.id.tvLibIdIntervention);
+                String text = listTextIntervention.getText().toString();
+                int id = i +1;
+                Log.d("BDD", "Id de l'intervention (Evenement) : " + id);
+                Intent intent = new Intent(FicheArbreActivity.this, FicheInterventionActivity.class);
+                intent.putExtra("selected-item", String.valueOf(id));
+                startActivity(intent);
+                }
+            });
         }
     }
 }

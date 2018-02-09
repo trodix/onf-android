@@ -7,39 +7,42 @@
 
     <LinearLayout
         android:layout_width="381dp"
-        android:layout_height="43dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/test"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvLibIdArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvLibIdArbre"
                 android:textAlignment="center"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvLibEspeceArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvLibEspeceArbre"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvLibCpArbre"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/tvLibCpArbre"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </LinearLayout>

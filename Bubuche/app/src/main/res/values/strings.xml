@@ -52,5 +52,8 @@
     <string name="ptDateCreationIntervention">Date</string>
     <string name="mtObsCreationIntervention">Entrer une observation</string>
     <string name="btCreationIntervention">Créer</string>
-    <string name="title_activity_envoi_data">EnvoiDataActivity</string>/>
+    <string name="title_activity_envoi_data">EnvoiDataActivity</string>
+    <string name="tvLibelleFicheArbre" >Libellé :</string>
+    <string name="tvDataLibelleFicheArbre" />
+    <string name="tvDataDateFicheIntervention" />/>
 </resources>
